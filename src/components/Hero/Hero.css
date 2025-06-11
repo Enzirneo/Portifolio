@@ -1,0 +1,225 @@
+.hero {
+  width: 95%;
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.212)),
+    url('/images/fundobranco.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
+  margin: 60px auto 50px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blur-box {
+  width: 1200px;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* Modo escuro para blur-box */
+.dark-mode .blur-box {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Resto do seu CSS segue igual */
+
+.hero-text p:first-of-type {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 8px;
+  order: -1;
+  margin-left: 50px;
+}
+
+.hero-text h1 {
+  font-size: 58px;
+  font-weight: bold;
+  background: linear-gradient(to left, #636363, #161616);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  margin-left: 50px;
+}
+
+.subtext {
+  font-size: 17px;
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  top: 15px;
+  right: 100px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  background-color: #2c2c2c46;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #000000;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  margin-left: 50px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn.secondary {
+  background-color: #2C2C2C;
+  color: #ffffff;
+}
+
+.btn.secondary:hover {
+  background: #38383880;
+  transform: translateY(-3px);
+}
+
+.btn:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.social-icons {
+  margin-left: 50px;
+  display: flex;
+  gap: 40px;
+}
+
+.social-icons a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.social-icons i {
+  font-size: 30px;
+  color: #242424 !important;
+  cursor: pointer;
+}
+
+.social-icons i:last-child {
+  margin-right: 0;
+}
+
+.profile-container {
+  border-radius: 50%;
+}
+
+.profile-image {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 100px;
+}
+
+.nome {
+  font-size: 24px;
+  position: fixed;
+  top: 15px;
+  left: 50px;
+  z-index: 1000;
+  background: linear-gradient(to left, #636363, #161616);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===== MODO ESCURO ===== */
+.dark-mode .hero {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url('/images/fundopreto.png') center/cover no-repeat;
+}
+
+.dark-mode .hero-text p:first-of-type {
+  color: #ccc;
+}
+
+.dark-mode .hero-text h1 {
+  background: linear-gradient(to left, #bbb, #eee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark-mode .subtext {
+  color: #ddd;
+}
+
+.dark-mode .lang-toggle {
+  background-color: #eeeeee44;
+  color: #222;
+}
+
+.dark-mode .lang-toggle:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-mode .btn.secondary {
+  background-color: #e0e0e0;
+  color: #111;
+}
+
+.dark-mode .btn.secondary:hover {
+  background: #bbb;
+}
+
+.dark-mode .social-icons i {
+  color: #eee !important;
+}
+
+.dark-mode .nome {
+  background: linear-gradient(to left, #ddd, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

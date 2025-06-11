@@ -20,7 +20,6 @@ header {
   box-sizing: border-box;
   background: transparent;
   z-index: 1100;
-  backdrop-filter: blur(10px);
   transition: background-color 0.3s ease;
   gap: 20px;
 }
