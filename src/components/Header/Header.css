@@ -1,5 +1,5 @@
 header {
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
   padding: 20px;
   display: flex;
@@ -12,16 +12,15 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 50px;
   box-sizing: border-box;
   background: transparent;
   z-index: 1100;
   transition: background-color 0.3s ease;
-  gap: 20px;
 }
 
 .name {
@@ -35,11 +34,13 @@ header {
   margin: 0;
 }
 
+
 .top-buttons {
   display: flex;
   align-items: center;
   gap: 12px;
   padding-right: 0;
+  margin-left: auto;
 }
 
 .lang-toggle {
@@ -83,13 +84,15 @@ header {
 }
 
 .nav-wrapper {
-  position: static;
-  width: auto;
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: auto;
+  min-width: 600px;
+  z-index: 1200;
+  pointer-events: auto;
 }
 
 .nav-container {
@@ -148,10 +151,10 @@ body.dark-mode .name {
 
 body.dark-mode .lang-toggle {
   background-color: rgba(255, 255, 255, 0.2);
-  color: #222222;
+  color: #DDDDDD;
 }
 body.dark-mode .lang-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(46, 46, 46, 0.603);
   color: #ffffff;
 }
 
@@ -159,10 +162,10 @@ body.dark-mode .theme-toggle {
   background-color: rgba(200, 200, 200, 0.3);
 }
 body.dark-mode .theme-toggle svg {
-  stroke: #222222;
+  stroke: #DDDDDD;
 }
 body.dark-mode .theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(46, 46, 46, 0.603);
 }
 body.dark-mode .theme-toggle:hover svg {
   stroke: #ffffff;

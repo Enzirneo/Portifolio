@@ -5,7 +5,7 @@ import './Hero.css';
 export default function Hero({ darkMode }) {
   return (
     <div className={darkMode ? 'dark-mode' : ''}>
-      <section className="hero">
+      <section className="hero" id="sobre">
         <div className="blur-box">
           <div className="hero-text">
             <p data-key="hero-ola">Olá, eu sou</p>
