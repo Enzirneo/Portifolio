@@ -1,0 +1,32 @@
+.projects-section {
+  margin-top: 200px;
+  padding: 60px 10px;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.projects-section p {
+  font-family: 'Montserrat', sans-serif;
+  color: #2c2c2c;
+  margin-bottom: 70px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+body.dark-mode .projects-section,
+body.dark-mode .projects-section p {
+  background-color: #121212;
+  color: #f0f0f0;
+}
