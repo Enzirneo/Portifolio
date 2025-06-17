@@ -1,5 +1,5 @@
 import React from "react";
-import './skillCategory.css';
+import './SkillCategory.css';
 
 export default function SkillCategory({ title, skills, skillClass }) {
   return (
