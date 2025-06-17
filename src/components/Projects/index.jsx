@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../ProjectCard';
 import { useLanguage } from "../../context/LanguageContext";
-import "./projects.css";
+import "./Projects.css";
 
 export default function Projects() {
   const { menuLabels } = useLanguage();
