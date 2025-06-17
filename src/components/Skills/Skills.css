@@ -1,0 +1,52 @@
+.skills-section {
+  margin-top: 200px;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.skills-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
+.skills-section p {
+  font-family: 'Montserrat', sans-serif;
+  color: #2c2c2c;
+  margin-bottom: 70px;
+  line-height: 1.5;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+body.dark-mode .skills-section {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .skills-section p {
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}

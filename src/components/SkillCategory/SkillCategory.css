@@ -1,0 +1,121 @@
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #d9d9d9;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .skills-grid {
+  background-color: #1e1e1e;
+}
+
+.skills-grid h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: inherit;
+}
+
+.habili {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.skill-box {
+  background-color: #fff;
+  padding: 15px 0;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  cursor: default;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+body.dark-mode .skill-box {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+}
+
+.front:nth-child(1):hover {
+  background: linear-gradient(135deg, #b84516 20%, #df6d41 100%);
+  color: #ffffff;
+}
+.front:nth-child(2):hover {
+  background: linear-gradient(135deg, #0e658f 20%, #2b96cc 100%);
+  color: #ffffff;
+}
+.front:nth-child(3):hover {
+  background: linear-gradient(135deg, #bb8300 20%, #f3be42 100%);
+  color: #ffffff;
+}
+.front:nth-child(4):hover {
+  background: linear-gradient(135deg,
+    #ff3b00 0%,
+    #f36c42 20%,
+    #ae4dff 40%,
+    #00beff 60%,
+    #00d47b 80%);
+  color: #ffffff;
+}
+.front:nth-child(5):hover {
+  background-color: #3858e9;
+  color: #ffffff;
+}
+
+
+.back:nth-child(1):hover {
+  background-color: #439b36;
+  color: #ffffff;
+}
+.back:nth-child(2):hover {
+  background: linear-gradient(135deg, #2b5b84 20%, #ffd343 100%);
+  color: #ffffff;
+}
+.back:nth-child(3):hover {
+  background: linear-gradient(135deg, #04536f 20%, #e67d27 100%);
+  color: #ffffff;
+}
+.back:nth-child(4):hover {
+  background: linear-gradient(135deg, #f59620 20%, #0074a3 100%);
+  color: #ffffff;
+}
+.back:nth-child(5):hover {
+  background-color: #4183c4;
+  color: #ffffff;
+}
+
+.devops:nth-child(1):hover {
+  background-color: #ff5722;
+  color: #ffffff;
+}
+.devops:nth-child(2):hover {
+  background: linear-gradient(135deg,
+    #ff6600 10%,
+    #8bc34a 45%,
+    #2196f3 70%,
+    #ffc107 90%);
+  color: #ffffff;
+}
+.devops:nth-child(3):hover {
+  background-color: #494848;
+  color: #ffffff;
+}
+.devops:nth-child(4):hover {
+  background: linear-gradient(135deg, #f5bc20 15%, #232424 80%);
+  color: #ffffff;
+}

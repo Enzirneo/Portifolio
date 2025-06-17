@@ -1,25 +1,23 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import './Hero.css';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function Hero({ darkMode }) {
+  const { menuLabels } = useLanguage();
+
   return (
     <div className={darkMode ? 'dark-mode' : ''}>
       <section className="hero" id="sobre">
         <div className="blur-box">
           <div className="hero-text">
-            <p data-key="hero-ola">Olá, eu sou</p>
-            <h1 className="Nsobre" data-key="hero-nome">
-              Enzo Villela Bispo
-            </h1>
-            <p className="subtext" data-key="hero-descricao">
-              Desenvolvedor Frontend formado em Engenharia da Computação e apaixonado por transformar ideias em interfaces modernas, funcionais e responsivas.
-              Tenho foco em criar experiências digitais que unam design e performance, sempre buscando aprimorar minhas habilidades com as melhores práticas do desenvolvimento web.
-            </p>
+            <p>{menuLabels["hero-ola"]}</p>
+            <h1 className="Nsobre">{menuLabels["hero-nome"]}</h1>
+            <p className="subtext" dangerouslySetInnerHTML={{ __html: menuLabels["hero-descricao"] }} />
 
             <div className="buttons">
-              <a href="#contato" className="btn secondary" data-key="btn-contato">
-                Entre em contato
+              <a href="#contato" className="btn secondary">
+                {menuLabels["btn-contato"]}
               </a>
             </div>
 
@@ -50,8 +48,8 @@ export default function Hero({ darkMode }) {
           download="Enzo_Villela_Bispo_Curriculo.pdf"
           className="download-btn-link"
         >
-          <button className="download-btn" data-key="btn-download">
-            Baixar Currículo
+          <button className="download-btn">
+            {menuLabels["btn-download"]}
           </button>
         </a>
       </section>
