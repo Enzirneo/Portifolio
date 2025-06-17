@@ -1,0 +1,41 @@
+.contact-section {
+  margin-top: 200px;
+  padding: 60px 10px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  font-family: 'Montserrat', sans-serif;
+  color: #2c2c2c;
+  margin-bottom: 5px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* DARK MODE */
+body.dark-mode .contact-section {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .contact-section p {
+  color: #f0f0f0;
+}
+
+body.dark-mode .contact-container {
+  background-color: #121212;
+}

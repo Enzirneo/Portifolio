@@ -27,6 +27,13 @@
 
 body.dark-mode .projects-section,
 body.dark-mode .projects-section p {
-  background-color: #121212;
   color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    width: 100%;
+  }
 }

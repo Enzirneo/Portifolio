@@ -5,6 +5,7 @@ import Header from './components/Header/index.jsx';
 import Hero from './components/Hero/index.jsx';
 import Skills from './components/Skills/index.jsx';
 import Projects from './components/Projects/index.jsx';
+import Contact from './components/Contact/index.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hero/>
       <Skills/>
       <Projects/>
+      <Contact/>
     </>
   );
 }
