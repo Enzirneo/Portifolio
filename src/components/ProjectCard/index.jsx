@@ -1,5 +1,5 @@
 import React from 'react';
-import "./projectcard.css";
+import "./ProjectCard.css";
 
 export default function ProjectCard({ image, title, description, link, dataKeyDesc, dataKeyLink }) {
   return (
