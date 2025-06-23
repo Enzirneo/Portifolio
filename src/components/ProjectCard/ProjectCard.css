@@ -57,7 +57,6 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Dark mode */
 body.dark-mode .project-card {
   background-color: #2e2e2e;
 }

@@ -36,6 +36,14 @@ export default function Projects() {
             dataKeyDesc="proj3-descricao"
             dataKeyLink="proj3-link"
           />
+          <ProjectCard
+            image="/images/Neuro.png"
+            title="NeuroSync"
+            description={menuLabels["proj4-descricao"]}
+            link="https://neurosync-ten.vercel.app/"
+            dataKeyDesc="proj4-descricao"
+            dataKeyLink="proj4-link"
+          />
         </div>
       </div>
     </section>
