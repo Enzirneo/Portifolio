@@ -9,7 +9,7 @@ export default function Skills() {
   const categories = [
     {
       title: "Frontend",
-      skills: ["HTML", "CSS", "JavaScript", "Figma", "WordPress"],
+      skills: ["HTML", "CSS", "JavaScript", "Figma", "WordPress", "React"],
       skillClass: "front",
     },
     {

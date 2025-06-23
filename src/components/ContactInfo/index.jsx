@@ -1,6 +1,7 @@
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import './ContactInfo.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function ContactInfo() {
   const { menuLabels } = useLanguage();
@@ -20,7 +21,7 @@ export default function ContactInfo() {
         <i className="fas fa-envelope"></i>
         <div>
           <h4>{menuLabels["contato-email"]}</h4>
-          <p>bispo.22.ev@gmail.com</p>
+          <p>enzo.bispo22@gmail.com</p>
         </div>
       </div>
       <div className="info-box">

@@ -12,7 +12,6 @@ html {
 }
 
 :root {
-  /* Variáveis para o tema claro */
   --bg-color: #D1D1D1;
   --link-color: #222222;
 }
@@ -24,7 +23,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Modo escuro */
 body.dark-mode {
   --bg-color: #121212;
   --link-color: #cccccc;

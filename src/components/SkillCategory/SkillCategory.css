@@ -77,6 +77,10 @@ body.dark-mode .skill-box {
   color: #ffffff;
 }
 
+.front:nth-child(6):hover {
+  background-color: #23272F;
+  color: #77B7D7;
+}
 
 .back:nth-child(1):hover {
   background-color: #439b36;

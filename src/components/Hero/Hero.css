@@ -108,10 +108,16 @@
   text-decoration: none;
 }
 
-.social-icons i {
-  font-size: 30px;
+.social-icons svg {
+  width: 30px;
+  height: 30px;
   color: #242424;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons svg:hover {
+  transform: scale(1.2);
 }
 
 .profile-container {
@@ -133,7 +139,6 @@
   right: 100px;
   z-index: 1000;
 }
-
 
 .nome {
   font-size: 24px;
@@ -170,7 +175,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== MODO ESCURO ===== */
 .dark-mode .hero {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url('/images/fundopreto.png') center/cover no-repeat;
@@ -215,13 +219,11 @@
   background: #bbb;
 }
 
-/* Corrigido: regras CSS sem aninhamento */
-.dark-mode .social-icons i {
+.dark-mode .social-icons svg {
   color: #f5f5f5;
-  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.dark-mode .social-icons i:hover {
+.dark-mode .social-icons svg:hover {
   color: #ffffff;
   transform: scale(1.2);
 }
@@ -243,7 +245,6 @@
   background: #bbb;
 }
 
-/* ===== MEDIA QUERIES ===== */
 @media (max-width: 1024px) {
   .blur-box {
     flex-direction: column;
