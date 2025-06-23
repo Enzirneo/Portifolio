@@ -14,11 +14,12 @@ export default function Projects() {
 
         <div className="projects-grid">
           <ProjectCard
-            image="/images/Enlemar.png"
-            title="Enlemar"
-            description={menuLabels["proj1-descricao"]}
-            link={null}
-            dataKeyDesc="proj1-descricao"
+            image="/images/Neuro.png"
+            title="NeuroSync"
+            description={menuLabels["proj4-descricao"]}
+            link="https://neurosync-ten.vercel.app/"
+            dataKeyDesc="proj4-descricao"
+            dataKeyLink="proj4-link"
           />
           <ProjectCard
             image="/images/organo.png"
@@ -36,14 +37,7 @@ export default function Projects() {
             dataKeyDesc="proj3-descricao"
             dataKeyLink="proj3-link"
           />
-          <ProjectCard
-            image="/images/Neuro.png"
-            title="NeuroSync"
-            description={menuLabels["proj4-descricao"]}
-            link="https://neurosync-ten.vercel.app/"
-            dataKeyDesc="proj4-descricao"
-            dataKeyLink="proj4-link"
-          />
+          
         </div>
       </div>
     </section>
