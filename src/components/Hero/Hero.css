@@ -1,7 +1,7 @@
 .hero {
   width: 98%;
   height: 85vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.212)),
+  background: linear-gradient(rgba(0, 0, 0, 0.137), rgba(0, 0, 0, 0.089)),
     url('/images/fundobranco.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@
 }
 
 .dark-mode .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(rgba(255, 255, 255, 0.041), rgba(240, 240, 240, 0.062)),
     url('/images/fundopreto.png') center/cover no-repeat;
 }
 

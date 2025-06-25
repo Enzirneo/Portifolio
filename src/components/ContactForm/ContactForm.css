@@ -45,18 +45,19 @@ textarea {
 
 .submit-btn {
   padding: 0.8rem 1.5rem;
-  background: #b6b6b6;
-  color: #2C2C2C;
+  background: #2C2C2C;
+  color: #FFFFFF;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
+  transition: 0.3s;
 }
 
 .submit-btn:hover {
-  background: #292929;
-  color: #ffffff;
+  background: #38383880;
+  transform: translateY(-3px);
 }
 
 body.dark-mode .contact-form {
@@ -73,4 +74,13 @@ body.dark-mode .contact-form textarea {
   background-color: #444444;
   color: #eee;
   border: 1px solid #666;
+}
+
+.dark-mode .submit-btn {
+  background-color: #DDDDDD;
+  color: #111;
+}
+
+.dark-mode .submit-btn:hover {
+  background: #bbb;
 }
