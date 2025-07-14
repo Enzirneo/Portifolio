@@ -123,3 +123,23 @@ body.dark-mode .skill-box {
   background: linear-gradient(135deg, #f5bc20 15%, #232424 80%);
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .skills-grid {
+    padding: 20px;
+  }
+
+  .skills-grid h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .habili {
+    gap: 10px;
+  }
+
+  .skill-box {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
