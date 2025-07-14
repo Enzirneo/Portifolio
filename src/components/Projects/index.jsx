@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react'; 
 import ProjectCard from '../ProjectCard';
 import { useLanguage } from "../../context/LanguageContext";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,6 +11,15 @@ import './Projects.css';
 export default function Projects() {
   const { menuLabels } = useLanguage();
   const swiperRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 768);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const projects = [
     {
@@ -63,26 +72,39 @@ export default function Projects() {
         ></p>
 
         <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={!isMobile ? handleMouseEnter : undefined}
+          onMouseLeave={!isMobile ? handleMouseLeave : undefined}
         >
           <Swiper
             modules={[Autoplay, Mousewheel]}
-            slidesPerView={3}
-            spaceBetween={40}
+            slidesPerView={isMobile ? 1 : 3}
+            spaceBetween={isMobile ? 20 : 40}
             loop={true}
             centeredSlides={true}
             speed={1200}
             autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
+              delay: 2000,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: !isMobile,
             }}
-            mousewheel={{ forceToAxis: true }}
+            mousewheel={isMobile ? false : { forceToAxis: true }}
+            touchStartPreventDefault={false}
             className="projects-swiper"
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
               swiper.autoplay.stop();
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                centeredSlides: true,
+                spaceBetween: 20,
+              },
+              769: {
+                slidesPerView: 3,
+                centeredSlides: true,
+                spaceBetween: 40,
+              }
             }}
           >
             {projects.map((project, index) => (
