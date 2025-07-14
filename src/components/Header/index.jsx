@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Menu , X } from "lucide-react";
 import './Header.css';
 import { useLanguage } from "../../context/LanguageContext";
 
@@ -7,6 +7,7 @@ export default function Header() {
   const { currentLanguage, toggleLanguage, menuLabels } = useLanguage();
 
   const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem("darkMode") === "true");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -25,12 +26,12 @@ export default function Header() {
     e.preventDefault();
     const target = document.getElementById(targetId);
     if (target) {
-      const windowHeight = window.innerHeight;
-      const sectionHeight = target.offsetHeight;
-      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset;
-      const scrollTo = offsetTop - (windowHeight / 2) + (sectionHeight / 2);
+      const { top } = target.getBoundingClientRect();
+      const offset = top + window.pageYOffset;
+      const scrollTo = offset - window.innerHeight / 2 + target.offsetHeight / 2;
       window.scrollTo({ top: scrollTo, behavior: "smooth" });
     }
+    setMenuOpen(false);
   }
 
   return (
@@ -38,7 +39,7 @@ export default function Header() {
       <div className="header-row">
         <h1 className="name">Enzo Villela Bispo</h1>
 
-        <div className="nav-wrapper">
+        <div className={`nav-wrapper ${menuOpen ? "open" : ""}`}>
           <nav className="nav-container">
             <ul>
               <li><a href="#sobre" onClick={(e) => handleMenuClick(e, "sobre")}>{menuLabels["menu-sobre"]}</a></li>
@@ -56,6 +57,10 @@ export default function Header() {
 
           <button className="theme-toggle" onClick={handleDarkModeToggle}>
             {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          
+          <button className="menu-toggle" onClick={() => setMenuOpen(prev => !prev)}>
+            {menuOpen ? <X size={22} /> :<Menu size={22} />}
           </button>
         </div>
       </div>
