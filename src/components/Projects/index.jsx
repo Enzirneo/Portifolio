@@ -74,7 +74,7 @@ export default function Projects() {
             centeredSlides={true}
             speed={1200}
             autoplay={{
-              delay: 4000,
+              delay: 1000,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
             }}
