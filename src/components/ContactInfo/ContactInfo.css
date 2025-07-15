@@ -38,11 +38,31 @@ body.dark-mode .info-box {
 @media (max-width: 768px) {
   .info-wrapper {
     flex-direction: column;
-    gap: 0rem;
+    gap: 1rem;
   }
 
   .info-box {
-    max-width: 100%;
-    margin-bottom: 1rem;
+    max-width: none;
+    width: 100%;
+    margin-bottom: 0.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    align-items: flex-start;
+  }
+
+  .info-box i {
+    font-size: 20px;
+    padding: 0.6rem;
+  }
+
+  .info-box h4 {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .info-box p {
+    margin: 2px 0 0;
+    font-size: 13px;
   }
 }

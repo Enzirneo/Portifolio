@@ -23,16 +23,30 @@ export default function Header() {
   }
 
   function handleMenuClick(e, targetId) {
-    e.preventDefault();
-    const target = document.getElementById(targetId);
-    if (target) {
-      const { top } = target.getBoundingClientRect();
-      const offset = top + window.pageYOffset;
-      const scrollTo = offset - window.innerHeight / 2 + target.offsetHeight / 2;
-      window.scrollTo({ top: scrollTo, behavior: "smooth" });
+  e.preventDefault();
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  const rect = target.getBoundingClientRect();
+  const scrollY = window.scrollY || window.pageYOffset;
+
+  let targetY = rect.top + scrollY;
+
+  if (window.innerWidth <= 768) {
+    const h2 = target.querySelector("h2");
+    if (h2) {
+      const h2Offset = h2.getBoundingClientRect().top + scrollY;
+      const offsetTop = h2Offset - 80;
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
     }
-    setMenuOpen(false);
+  } else {
+    window.scrollTo({ top: target.offsetTop - 50, behavior: "smooth" });
   }
+
+  setMenuOpen(false);
+}
 
   return (
     <header>

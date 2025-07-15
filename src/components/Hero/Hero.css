@@ -253,12 +253,12 @@
   }
 
   .hero-text {
-    align-items: center;
+    align-items: left;
     text-align: justify;
   }
 
   .hero-text h1 {
-    font-size: 34px;
+    font-size: 24px;
   }
 
   .hero-text p:first-of-type {

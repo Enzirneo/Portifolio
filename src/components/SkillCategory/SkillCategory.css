@@ -127,6 +127,7 @@ body.dark-mode .skill-box {
 @media (max-width: 768px) {
   .skills-grid {
     padding: 20px;
+    width: 320px;
   }
 
   .skills-grid h3 {

@@ -172,13 +172,35 @@ body.dark-mode nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
+  .header-row {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  body.dark-mode .header-row {
+    background-color: rgba(30, 30, 30, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
   .name {
-    font-size: 22px;
+    font-size: 20px;
     margin-left: -30px;
   }
 
   .menu-toggle {
     display: flex;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+  }
+
+  .lang-toggle,
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
   }
 
   .nav-wrapper {
@@ -192,6 +214,10 @@ body.dark-mode nav ul li a:hover {
 
   .nav-wrapper.open {
     display: flex;
+    background-color: rgba(94, 93, 93, 0.76);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
   }
 
   .nav-container {
@@ -199,6 +225,17 @@ body.dark-mode nav ul li a:hover {
     padding: 10px 0;
     border-radius: 10px;
     min-width: unset;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  body.dark-mode .nav-wrapper.open {
+    background-color: rgba(170, 170, 170, 0.671);
+  }
+
+  body.dark-mode .nav-container {
+    background-color: rgba(50, 50, 50, 0.25);
   }
 
   nav ul {
@@ -213,6 +250,9 @@ body.dark-mode nav ul li a:hover {
 
   .top-buttons {
     flex-direction: row !important;
+    display: flex;
+    width: 35px;
+    height: 35px;
   }
 }
 

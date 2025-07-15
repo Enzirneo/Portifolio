@@ -88,16 +88,22 @@ body.dark-mode .contact-form textarea {
 @media (max-width: 768px) {
   .contact-form {
     max-width: 100%;
-    padding: 2rem 1rem;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+  }
+
+  .contact-form h3 {
+    font-size: 25px;
   }
 
   input,
   textarea {
-    font-size: 1rem;
+    font-size: 12px;
+    padding: 1rem;
   }
 
   .submit-btn {
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 17px;
   }
 }

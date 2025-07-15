@@ -56,8 +56,13 @@ body.dark-mode .contact-container {
   }
 
   .contact-container {
+    display: flex;
     flex-direction: column;
-    padding: 20px 10px;
-    gap: 30px;
+    align-items: center;          /* centraliza o conteúdo no eixo horizontal */
+    justify-content: center;
+    margin-left: -20px;
+    width: 320px;
+    padding: 20px 0;
+    gap: 20px;
   }
 }
