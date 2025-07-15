@@ -42,9 +42,9 @@ body.dark-mode .info-box {
   }
 
   .info-box {
-    max-width: none;
+    max-width: 100%;
     width: 100%;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.5rem;
     padding: 0.8rem 1.5rem;
     border-radius: 12px;
     font-size: 1rem;
@@ -58,11 +58,11 @@ body.dark-mode .info-box {
 
   .info-box h4 {
     margin: 0;
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   .info-box p {
     margin: 2px 0 0;
-    font-size: 13px;
+    font-size: 0.95rem;
   }
 }
