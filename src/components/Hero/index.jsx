@@ -44,7 +44,7 @@ export default function Hero({ darkMode }) {
         </div>
 
         <a
-          href="https://drive.google.com/uc?export=download&id=1MXSNYr6FaBIDVYKhPX7KcV8j_Sa6sNwQ"
+          href="https://drive.google.com/uc?export=download&id=1X34C3N5ZqGaQ6nQnfueurApq-w0Cvq8Y"
           download="Enzo_Villela_Bispo_Curriculo.pdf"
           className="download-btn-link"
         >
